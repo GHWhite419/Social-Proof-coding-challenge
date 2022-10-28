@@ -1,0 +1,260 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Galen's code */
+body {
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: hsl(300, 43%, 22%);
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    color: hsl(303, 10%, 53%);
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0rem 2rem;
+}
+
+.rating {
+    background-color: hsl(300, 24%, 96%);
+    text-align: center;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.rating div {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.rating img {
+    padding: 0.3rem;
+}
+
+.rating p {
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    padding-bottom: 0.5rem;
+}
+
+.comment {
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.comment div {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.comment img {
+    border-radius: 3rem;
+    max-width: 3rem;
+}
+
+.comment header {
+    margin-left: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+span {
+    color: hsl(333, 80%, 67%);
+}
+
+.comment p {
+    color: white;
+    text-align: left;
+    padding-bottom: 2rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 900px) {
+    body {
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    }
+
+    /* main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } */
+
+    article {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header {
+        max-width: 31rem;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        max-width: 28rem;
+    }
+
+    header p {
+        text-align: left;
+        padding-left: 3rem;
+        line-height: 1.5rem;
+    }
+
+    .ratings {
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+        padding-right: 2rem;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        padding: 0.4rem 0rem;
+        width: 30rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .rating div {
+        padding-left: 2rem;
+    }
+
+    .rating p {
+        padding-bottom: 0;
+        padding-right: 3rem;
+    }
+
+    .rating:first-child {
+        align-self: flex-start;
+        margin-top: 3rem;
+    }
+
+    .rating:nth-child(2) {
+       align-self: center;
+    }
+
+    .rating:last-child {
+        align-self: flex-end;
+    }
+
+    article:last-child {
+        padding-top: 3rem;
+        display: flex;
+        height: 24rem;
+        padding-left: 1.9rem;
+        padding-right: 2rem;
+    }
+
+    .comment:first-child {
+        align-self: flex-start;
+    }
+
+    .comment:nth-child(2) {
+        align-self: center;
+    }
+
+    .comment:last-child {
+        align-self: flex-end;;
+    }
+}
